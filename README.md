@@ -16,3 +16,8 @@ Setup for my neovim, tmux, and ohmyzsh preferences
 - Enter the ```~/.zshrc``` file and change the ```ZSH_THEME``` to ```powerlevel10k/powerlevel10k```
 - Use the command ```source ~/.zshrc``` to initialize the setup.
 
+- Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+- Add ```zsh-autosuggestions zsh-syntax-highlighting web-search``` to the ```plugins``` in the ```~/.zshrc``` file
