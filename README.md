@@ -7,3 +7,8 @@ Setup for my neovim, tmux, and ohmyzsh preferences
 - [Tmux](https://github.com/tmux/tmux)
 - [Neovim](https://github.com/neovim/neovim)
 
+### OhMyZsh Setup
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+Enter the ```~/.zshrc``` file and change the ```ZSH_THEME``` to ```powerlevel10k/powerlevel10k```
+Use the command ```source ~/.zshrc``` to initialize the setup.
+
