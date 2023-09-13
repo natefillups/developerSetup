@@ -7,8 +7,12 @@ Setup for my neovim, tmux, and ohmyzsh preferences
 - [Tmux](https://github.com/tmux/tmux)
 - [Neovim](https://github.com/neovim/neovim)
 
+### Install NerdFonts
+- [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
+- Next setup the CaskaydiaCove Nerd Font (Font size 16)
+
 ### OhMyZsh Setup
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
-Enter the ```~/.zshrc``` file and change the ```ZSH_THEME``` to ```powerlevel10k/powerlevel10k```
-Use the command ```source ~/.zshrc``` to initialize the setup.
+- Install [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- Enter the ```~/.zshrc``` file and change the ```ZSH_THEME``` to ```powerlevel10k/powerlevel10k```
+- Use the command ```source ~/.zshrc``` to initialize the setup.
 
