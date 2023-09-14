@@ -28,4 +28,4 @@ Setup for my neovim, tmux, and ohmyzsh preferences
 
 ### NeoVim Setup
 - `brew install neovim`
-
+- `:call coc#util#install()`
