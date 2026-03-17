@@ -1,0 +1,8 @@
+[user]
+	# TODO: set your name and email
+	# name =
+	# email =
+[credential]
+	helper = store
+[core]
+	excludesfile = ~/.config/git/ignore
