@@ -1,5 +1,5 @@
--- set leader key to space
-vim.g.mapleader = " "
+-- set leader key to backslash
+vim.g.mapleader = "\\"
 
 local M = {}
 
