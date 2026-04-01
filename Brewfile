@@ -3,7 +3,6 @@ brew "neovim"
 brew "gh"
 brew "wget"
 brew "jq"
-brew "tree-sitter"
 
 # Languages & Runtimes
 brew "node"
