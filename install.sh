@@ -82,6 +82,11 @@ clone_if_missing "https://github.com/zsh-users/zsh-syntax-highlighting" "${ZSH_C
 # Neovim
 link_config "${DOTFILES_DIR}/config/nvim" "${CONFIG_DIR}/nvim"
 
+# CoC extensions
+link_config "${DOTFILES_DIR}/config/coc/extensions/package.json" "${CONFIG_DIR}/coc/extensions/package.json"
+(cd "${CONFIG_DIR}/coc/extensions" && npm install)
+info "CoC extensions installed"
+
 # Kitty
 link_config "${DOTFILES_DIR}/config/kitty" "${CONFIG_DIR}/kitty"
 
