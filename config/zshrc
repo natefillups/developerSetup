@@ -43,6 +43,35 @@ alias klt="kubectl logs --tail=200"
 alias ke="kubectl exec -it"
 alias kd="kubectl describe"
 
+# ── Functions: Kubernetes Environments ───────────────────────────────
+kubeenv() {
+  ENV=$1; shift
+  export ENV AWS_PROFILE=datahub_${ENV}_Csserving_sso_assume_role
+  export KUBE_CONTEXT=$ENV-csserving DC='uw2' COLOR="blue"
+  case $ENV in
+    prd) export HDFS_HADOOP_CLUSTER="p1" HDFS_HADOOP_USER="iadetl" AWS_ACCOUNT_ID=664473224054 S3_BUCKET="s3://ads-4054-prd-hubdata-dataintrnl-csserving-uw2" ;;
+    stg) export HDFS_HADOOP_CLUSTER="s1" HDFS_HADOOP_USER="iadetl" AWS_ACCOUNT_ID=338467537037 S3_BUCKET="s3://ads-7037-stg-hubdata-dataintrnl-csserving-uw2" ;;
+    rvw) export HDFS_HADOOP_CLUSTER="r4" HDFS_HADOOP_USER="iadetlqa" AWS_ACCOUNT_ID=484333865507 S3_BUCKET="s3://ads-5507-rvw-hubdata-dataintrnl-csserving-uw2" ;;
+    dev) export HDFS_HADOOP_CLUSTER="r4" HDFS_HADOOP_USER="iadetlqa" AWS_ACCOUNT_ID=340345076445 S3_BUCKET="s3://ads-6445-dev-hubdata-dataintrnl-csserving-uw2" ;;
+  esac
+  kubectl config use-context $ENV-csserving
+}
+
+kubeenv2() {
+  ENV=$1; shift
+  export ENV AWS_PROFILE=datahub2_${ENV}_Serving-Offline_sso_assume_role
+  export KUBE_CONTEXT=$ENV-csserving2 DC='uw2' COLOR="blue"
+  case $ENV in
+    prd) export HDFS_HADOOP_CLUSTER="p1" HDFS_HADOOP_USER="iadetl" AWS_ACCOUNT_ID=196674877133 S3_BUCKET="s3://ads-7133-prd-hubdata-dataintrnl-csserving-uw2" ;;
+    stg) export HDFS_HADOOP_CLUSTER="s1" HDFS_HADOOP_USER="iadetl" AWS_ACCOUNT_ID=165016288236 S3_BUCKET="s3://ads-8236-stg-hubdata-dataintrnl-csserving-uw2" ;;
+    rvw) export HDFS_HADOOP_CLUSTER="r4" HDFS_HADOOP_USER="iadetlqa" AWS_ACCOUNT_ID=141560515655 S3_BUCKET="s3://ads-5655-rvw-hubdata-dataintrnl-csserving-uw2" ;;
+    dev) export HDFS_HADOOP_CLUSTER="r4" HDFS_HADOOP_USER="iadetlqa" AWS_ACCOUNT_ID=710266465443 S3_BUCKET="s3://ads-6443-dev-hubdata-dataintrnl-csserving-uw2" ;;
+  esac
+  kubectl config use-context $ENV-csserving2
+}
+
+mkcd() { mkdir -p "$@" && cd "${@:$#}"; }
+
 # ── Aliases: Git ─────────────────────────────────────────────────────
 alias gs="git status"
 alias gd="git diff"
