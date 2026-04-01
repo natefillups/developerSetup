@@ -60,3 +60,11 @@ alias des="cd ~/Developer/distribution/ap-des-maps"
 # ── Aliases: Misc ────────────────────────────────────────────────────
 alias v="nvim"
 alias c="claude"
+
+# ── PATH & Runtime Setup ────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$PATH"
+
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
