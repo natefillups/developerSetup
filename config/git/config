@@ -6,3 +6,10 @@
 	helper = store
 [core]
 	excludesfile = ~/.config/git/ignore
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	lg = log --oneline --graph --decorate -20
+	last = log -1 HEAD
+	unstage = reset HEAD --

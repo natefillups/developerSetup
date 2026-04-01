@@ -4,6 +4,10 @@ brew "gh"
 brew "wget"
 brew "jq"
 brew "ripgrep"
+brew "fzf"
+brew "zoxide"
+brew "bat"
+brew "eza"
 
 # Languages & Runtimes
 brew "node"
