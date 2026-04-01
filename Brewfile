@@ -3,6 +3,7 @@ brew "neovim"
 brew "gh"
 brew "wget"
 brew "jq"
+brew "ripgrep"
 
 # Languages & Runtimes
 brew "node"
