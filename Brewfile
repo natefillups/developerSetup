@@ -24,8 +24,9 @@ brew "go"
 brew "scala"
 
 # Dev Tools
-brew "docker"
-brew "docker-compose"
+# Docker is provided by Docker Desktop (/Applications/Docker.app), which ships
+# the docker CLI, `docker compose`, and completions. The brew docker formula is
+# a redundant CLI that conflicts with docker-completion on link, so it's omitted.
 brew "direnv"
 brew "watch"
 
