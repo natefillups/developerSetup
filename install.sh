@@ -56,8 +56,11 @@ echo ""
 # Brew packages
 if command -v brew &>/dev/null; then
     echo "Installing Homebrew packages..."
-    brew bundle --file="${DOTFILES_DIR}/Brewfile"
-    info "Homebrew packages installed"
+    if brew bundle --file="${DOTFILES_DIR}/Brewfile"; then
+        info "Homebrew packages installed"
+    else
+        warn "brew bundle had failures (e.g. an unreachable tap) — continuing with config linking"
+    fi
 else
     error "Homebrew not found — install it from https://brew.sh"
     exit 1
