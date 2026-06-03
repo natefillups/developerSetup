@@ -36,7 +36,7 @@ hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc": 0x7
 
 - `brew install neovim`
 - Plugins are managed via [lazy.nvim](https://github.com/folke/lazy.nvim) and install automatically on first launch.
-- After first launch, run `:call coc#util#install()` inside nvim to finish CoC setup.
+- LSP servers are managed by [mason.nvim](https://github.com/mason-org/mason.nvim) — run `:Mason` to view/install. Completion is [blink.cmp](https://github.com/saghen/blink.cmp).
 
 ### Fonts
 
