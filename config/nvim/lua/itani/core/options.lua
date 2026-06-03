@@ -1,5 +1,9 @@
 vim.g.mapleader = "\\"
 
+-- Disable netrw at startup (nvim-tree replaces it). Must run before plugins load.
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.cmd([[filetype on]])
 vim.cmd([[filetype plugin on]])
 vim.cmd([[filetype indent on]])
@@ -69,6 +73,6 @@ opt.showmatch = true
 opt.hlsearch = true
 opt.history = 1000
 opt.wildmenu = true
-opt.wildignore = '*.docx, *.jpg, *.png, *.gif, *.pdf, *.pyc, *.exe, *.flv, *.img, *.xlsx'
+opt.wildignore = '*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx'
 
 

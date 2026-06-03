@@ -33,7 +33,7 @@ link_config() {
     fi
 
     mkdir -p "$(dirname "$dest")"
-    ln -s "$src" "$dest"
+    ln -sfn "$src" "$dest"
     info "$dest → $src"
 }
 

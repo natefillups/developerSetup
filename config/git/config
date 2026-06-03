@@ -3,9 +3,39 @@
 	# name =
 	# email =
 [credential]
-	helper = store
+	helper = osxkeychain
 [core]
 	excludesfile = ~/.config/git/ignore
+	fsmonitor = true
+	untrackedCache = true
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+	updateRefs = true
+[merge]
+	conflictStyle = zdiff3
+[rerere]
+	enabled = true
+[push]
+	autoSetupRemote = true
+	default = simple
+[fetch]
+	prune = true
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
 [alias]
 	st = status
 	co = checkout
@@ -13,3 +43,5 @@
 	lg = log --oneline --graph --decorate -20
 	last = log -1 HEAD
 	unstage = reset HEAD --
+	amend = commit --amend --no-edit
+	staged = diff --cached

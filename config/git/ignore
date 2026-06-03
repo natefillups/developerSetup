@@ -3,4 +3,9 @@
 *.swp
 *.swo
 *~
+*.bak
 .env
+.idea/
+.vscode/
+node_modules/
+Thumbs.db
