@@ -11,14 +11,13 @@ return {
     vim.opt.updatetime = 300
     vim.opt.signcolumn = "yes"
 
-    -- Servers to install + enable. Java (jdtls) and Scala (metals) replace the
-    -- old coc-java / coc-metals. For heavy Java/Scala work the dedicated
-    -- nvim-jdtls / nvim-metals plugins offer more, but mason + lspconfig gives
-    -- working LSP out of the box.
+    -- Servers installed + enabled via mason-lspconfig. jdtls replaces
+    -- coc-java. Scala/metals is handled separately by nvim-metals (see
+    -- plugins/metals.lua) since mason-lspconfig doesn't manage metals.
     local servers = {
       "ts_ls", "lua_ls", "gopls", "pyright",
       "jsonls", "yamlls", "bashls",
-      "jdtls", "metals",
+      "jdtls",
     }
 
     -- Global defaults applied to every server (Neovim 0.11+ API).
