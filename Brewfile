@@ -22,6 +22,7 @@ brew "python@3.14"
 brew "uv"
 brew "go"
 brew "scala"
+brew "coursier"  # Scala artifact fetcher; nvim-metals uses it to install metals
 
 # Dev Tools
 # Docker is provided by Docker Desktop (/Applications/Docker.app), which ships
